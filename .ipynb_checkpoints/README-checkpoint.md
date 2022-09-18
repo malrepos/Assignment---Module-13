@@ -2,13 +2,21 @@
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+* The purpose of this assignment is to predict, using neural network models, whether an applicant requesting VC funding will be successful.
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+* The data provided contains more than 34,000 organizations that have received funding from Alphabet Soup over the years.
+
+
+## Stages of the Process
+
+
+   * I use OneHotEncoder() to encode the categorical variables in the dataset into numerical values
+   * I use train_test_split on my X and y variables
+   * I build a StandardScaler instance and transform the data
+   * I build a Sequential model, adding layers, compiling and fitting
+   * The Dropout() function is used
+   * evaluations and metrics of models are shown using the evaluate() and summary() methods
+   * models are saved as .h5 files, located in the Resources folder
 
 ## Results
 
@@ -23,7 +31,9 @@ In this section, describe the analysis you completed for the machine learning mo
   * relu activation function is used on both hidden layers
   * sigmoid acitvation function is used on the output layer
   
-![Original Model Summary](Images/Original_Model_Summary.JPEG)
+  
+![Original Model Summary](Image/Original_Model_Summary.JPEG)
+
 
   * compiling the model using binary_crossentropy function
   * optimizer "adam" is used
@@ -40,7 +50,7 @@ In this section, describe the analysis you completed for the machine learning mo
   * relu activation function is used on both hidden layers
   * sigmoid acitvation function is used on the output layer
   
-![A1 Model Summary](Images/A1_Model_Summary.JPEG)
+![A1 Model Summary](Image/A1_Model_Summary.JPEG)
 
   * compiling the model using binary_crossentropy function
   * optimizer "adam" is used
@@ -58,11 +68,11 @@ In this section, describe the analysis you completed for the machine learning mo
   * relu activation function is used on both hidden layers
   * sigmoid acitvation function is used on the output layer
   
-![A2 Model Summary](Images/A2_Model_Summary.JPEG)
+![A2 Model Summary](Image/A2_Model_Summary.JPEG)
 
   * compiling the model using binary_crossentropy function
   * optimizer "adam" is used
-  * the model was run for 100 epochs
+  * the model was run for 50 epochs
 
 ## Summary
 
@@ -72,9 +82,8 @@ In the Alternative 1 Model, where I ran the identical specification as the Origi
 
 Loss was also roughly the same across all models.
 
-![Original_Model_Results](Images/Original_Model_Results.JPEG))
+![Original_Model_Results](Image/Original_Model_Results.JPEG))
 
-![A1_Model_Results](Images/A1_Model_Results.JPEG))
+![A1_Model_Results](Image/A1_Model_Results.JPEG))
 
-![A2_Model_Results](Images/A2_Model_Results.JPEG))
-
+![A2_Model_Results](Image/A2_Model_Results.JPEG))
